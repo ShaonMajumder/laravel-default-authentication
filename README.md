@@ -6,6 +6,35 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+## Setup
+
+Creating The Project --
+composer create-project laravel/laravel=^8 laravel-default-authentication --prefer-dist
+
+.env file
+
+db setup 
+
+hosts file
+
+vhost :
+<VirtualHost *:80>
+    DocumentRoot "D:\Projects\laravel-default-authentication\public"
+    ServerName login.test
+    <Directory "D:\Projects\laravel-default-authentication\public">
+        Options Indexes FollowSymLinks
+        AllowOverride all
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+Generate login / registration scaffolding --
+composer require laravel/ui
+php artisan ui vue --auth
+npm install
+npm run development
+
+https://github.com/ShaonMajumder/laravel-default-authentication.git
 
 ## About Laravel
 
